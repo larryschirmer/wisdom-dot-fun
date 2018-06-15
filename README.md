@@ -12,7 +12,7 @@
 
 # Problem
 
-Data on the blockchain is immutable and persistent. These are qualities that we love so much about the technology. A shared store of data that everyone has access to and no one can censor. But what happens then we need a shared store of ephemeral data or users still want to choice to destroy access to their data?
+Data on the blockchain is immutable and persistent. These are qualities that I love so much about the technology. A shared store of data that everyone has access to and no one can censor. But what happens then I need a shared store of ephemeral data or users still want to choice to destroy access to their data?
 
 > ### I thought people couldn’t access private information held in smart contracts?
 
@@ -28,7 +28,7 @@ When organizations approach security, it is with a "trust us to keep your data p
 
 ![A conceptual drawing of the blockchain](https://raw.githubusercontent.com/larryschirmer/wisdom-dot-fun/master/readme-assets/blockchain.png)
 
-We take the opposite approach using a "trust the blockchain to keep your data open, and trust us to forget how to decrypt it" model.
+I take the opposite approach using a "trust the blockchain to keep your data open, and trust us to forget how to decrypt it" model.
 
 ### Openness First
 
@@ -40,11 +40,13 @@ For social networks, often the draw to the platform is the ability to participat
 
 ![a drawing of two people participating in a trust fall](https://raw.githubusercontent.com/larryschirmer/wisdom-dot-fun/master/readme-assets/trust.png)
 
-A feature that most popular platforms have, to delete personal content, is not compatible with the blockchain. Data added to the blockchain is stored forever and cannot be taken back, but we feel like there should always be the option to remove access to your content. Centralized Trust means that we encrypt your data before storing on the blockchain, and provide the platform decrypted access to it upon request. This means that, should a user ever want to remove access to the content, no user or miner will have decrypted access to it anymore.
+A feature that most popular platforms have, to delete personal content, is not compatible with the blockchain. Data added to the blockchain is stored forever and cannot be taken back, but I feel like there should always be the option to remove access to your content. Centralized Trust means that I encrypt your data before storing on the blockchain, and provide the platform decrypted access to it upon request. This means that, should a user ever want to remove access to the content, no user or miner will have decrypted access to it anymore.
 
 # Solution/Resolution
 
-As a fun example concept to test Openness First, Centralized Trust, we developed a social network for Markov Chain generated wisdom.
+As a fun example concept to test Openness First, Centralized Trust, I developed a social network for Markov Chain generated wisdom.
+
+![app example](https://raw.githubusercontent.com/larryschirmer/wisdom-dot-fun/master/readme-assets/markovchainexample.png)
 
 The platform uses an oracle to fetch wisdom from the blockchain to populate the page offering progressive enhancement for those not yet familiar with Metamask or the blockchain.
 
@@ -63,4 +65,4 @@ If metamask is installed, users can generate their own content. Posting content 
 
 These tokens can then be used to upvote/downvote other wisdom on the page building a sense of ownership. When content is first placed on the blockchain, it is afforded one point. When any content is down voted to zero, the system skips decrypting the data and it is no longer available on the site.
 
-Sound Fun? We thought so… Now get in there and say something fun
+Sound Fun? I thought so… Now get in there and say something fun
