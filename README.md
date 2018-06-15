@@ -9,6 +9,7 @@
     - Openness First
     - Centralized Trust
 1.  Solution/Resolution
+1.  Problems and Future Work
 
 # Problem
 
@@ -66,3 +67,26 @@ If metamask is installed, users can generate their own content. Posting content 
 These tokens can then be used to upvote/downvote other wisdom on the page building a sense of ownership. When content is first placed on the blockchain, it is afforded one point. When any content is down voted to zero, the system skips decrypting the data and it is no longer available on the site.
 
 Sound Fun? I thought so… Now get in there and say something fun
+
+# Problems and Future Work
+
+### Problems
+
+- Building a social network presents issues delivering data at scale. Presently, the architecture of the network follows this algorithm:
+  1.  Make a request to ethereum for all of the contracts that store wisdom. This returns addresses to encrypted text.
+  1.  Make a request to each of the addresses to fetch the encrypted data from the contract.
+  1.  With the encrypted data for each wisdom, send encrypted data to remote encrypt/decrypt serverless Faas (this is to keep the private key separate from the app logic). This is done individually, but should be done in batches.
+  1.  Then deliver decrypted data to front-end
+- Proposed solution: break up the content storage horizontally making the need for fewer requests to the blockchain
+
+### Future Work
+
+- Pick a different name: I can't afford the name
+- Back-end:
+  - Complete the voting process, the ability for users to interact with the blockchain from the UI
+  - Switch to a more sustainable content storage architecture
+  - Assign ownership to content, so users can identify which content is theirs
+- Front-end:
+  - Show a timeline of all the generated wisdom, fetched from oracle
+  - If user has Metamask, offer button to generate new content from Markov-chain UI
+  - If user has Metamask, have an upvote/downvote button next to each piece of wisdom
