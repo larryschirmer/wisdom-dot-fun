@@ -1,0 +1,5 @@
+{
+  "path": "/encrypt",
+  "httpMethod": "POST",
+  "body": "{\"text\": \"hello\"}"
+}

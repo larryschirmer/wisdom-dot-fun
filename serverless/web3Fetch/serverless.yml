@@ -1,0 +1,20 @@
+service: encryption
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  environment:
+    SEEDWORDS: ${file(./config.${self:provider.stage}.json):seedWords}
+    PROVIDERURL: ${file(./config.${self:provider.stage}.json):providerURL}
+    ADDRESS: ${file(./config.${self:provider.stage}.json):address}
+
+functions:
+  fetch:
+    handler: handler.fetch
+    events:
+      - http:
+          path: fetch
+          method: get
+          cors: true

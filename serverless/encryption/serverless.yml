@@ -1,0 +1,26 @@
+service: encryption
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  environment:
+    ALGORITHM: ${file(./config.${self:provider.stage}.json):algorithm}
+    KEY: ${file(./config.${self:provider.stage}.json):key}
+
+functions:
+  encrypt:
+    handler: handler.encrypt
+    events:
+      - http:
+          path: encrypt
+          method: post
+          cors: true
+  decrypt:
+    handler: handler.decrypt
+    events:
+      - http:
+          path: decrypt
+          method: post
+          cors: true
