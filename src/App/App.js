@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
 import { Wrapper, Header, NextWords, Button } from './styles';
-import wisdom from '../markov_data';
-import getWord from '../starterWords';
-
-const getNextWord = word =>
-  wisdom
-    .start(word)
-    .end(1)
-    .process();
-
-const setUpperCase = arr =>
-  arr
-    .join(' ')
-    .charAt(0)
-    .toUpperCase() + arr.join(' ').substr(1);
+import { getWord, setUpperCase, getNextWord } from '../markov_functions';
 
 class App extends Component {
   state = {
@@ -21,12 +8,12 @@ class App extends Component {
     count: 0,
   };
 
-  assignWord = e => {
-    const newWord = e.target.innerText;
+  assignWord = ({ target }) => {
+    const newWord = target.innerText;
 
-    this.setState(prevState => ({
-      words: [...prevState.words, newWord],
-      count: prevState.count + 1,
+    this.setState(({ words, count }) => ({
+      words: [...words, newWord],
+      count: count + 1,
     }));
   };
 
@@ -39,7 +26,7 @@ class App extends Component {
     const { words, count } = this.state;
     const wisdom = setUpperCase(words);
     const nextWord = words[count];
-    // lower.charAt(0).toUpperCase() + lower.substr(1)
+
     return (
       <Wrapper>
         <Header>{wisdom}</Header>
@@ -49,7 +36,6 @@ class App extends Component {
           <Button onClick={this.assignWord}>{getNextWord(nextWord).split(' ')[1]}</Button>
           <Button onClick={this.assignWord}>{getNextWord(nextWord).split(' ')[1]}</Button>
         </NextWords>
-        {/* <Save onClick={this.saveWisdom}>Yep</Save> */}
       </Wrapper>
     );
   }
