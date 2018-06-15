@@ -24,11 +24,11 @@ So how can one store data on the blockchain that can be accessed for a period of
 
 > ### Openness First, Centralized Trust.
 
-When organizations approach security, it is with a ‘trust us to keep your data private’ model. Data is stored on secure centralized servers for safe keeping and uses can trust that it will be kept safe.
+When organizations approach security, it is with a "trust us to keep your data private" model. Data is stored on secure centralized servers for safe keeping and users can trust that it will be kept safe.
 
 ![A conceptual drawing of the blockchain](https://raw.githubusercontent.com/larryschirmer/wisdom-dot-fun/master/readme-assets/blockchain.png)
 
-We take the opposite approach using a ‘trust the blockchain to keep your data open, and trust us to forget how to decrypt it.
+We take the opposite approach using a "trust the blockchain to keep your data open, and trust us to forget how to decrypt it" model.
 
 ### Openness First
 
